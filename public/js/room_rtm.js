@@ -51,7 +51,7 @@ let getMembers = async () => {
 
 let sendMessage = async (e) => {
   e.preventDefault();
-
+  // e.stopPropogation()
   let message = e.target.message.value;
   channel.sendMessage({
     text: JSON.stringify({

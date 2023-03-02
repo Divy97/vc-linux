@@ -71,3 +71,10 @@ let hideDisplayFrame = () => {
 };
 
 displayFrame.addEventListener("click", hideDisplayFrame);
+let ask_btn = document.getElementById("ask_btn");
+
+let app = document.getElementById("app")
+ask_btn.addEventListener('click', () => {
+  window.open('/gpt.ejs', '_blank');
+})
+

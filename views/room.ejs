@@ -8,6 +8,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/room.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/gpt.css'>
 
 </head>
 
@@ -93,6 +94,10 @@
                             <path d="M16 10v-5l8 7-8 7v-5h-8v-4h8zm-16-8v20h14v-2h-12v-16h12v-2h-14z" />
                         </svg>
                     </button>
+                    <button id="ask_btn">
+                        <img src="assets/ask.png" alt="" width="50" height="50">
+                    </button>
+
                 </div>
             </section>
 
@@ -108,12 +113,15 @@
 
             </section>
         </div>
+
     </main>
     <script>
         APP_ID = "<%=APP_ID%>"
         CHANNEL = "<%= CHANNEL%>"
         TOKEN = "<%=TOKEN %>"
         USERNAME = "<%=USERNAME %>"
+
+
     </script>
 
     <script type="text/javascript" src="js/agora-rtm-sdk-1.5.1.js"></script>
@@ -121,6 +129,7 @@
     <script type="text/javascript" src="js/room.js"></script>
     <script type="text/javascript" src="js/room_rtm.js"></script>
     <script type="text/javascript" src="js/room_rtc.js"></script>
+
 
 </body>
 
