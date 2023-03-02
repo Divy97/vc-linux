@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 });
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: process.env.APIKEY,
 });
 
 const openai = new OpenAIApi(configuration);
