@@ -40,6 +40,11 @@ app.get("/landingPage.ejs", (req, res) => {
   res.render("landingPage.ejs");
 });
 
+app.get("/feedback.ejs", (req, res) => {
+  res.render("feedback.ejs");
+});
+
+
 app.get("/login.ejs", (req, res) => {
   res.render("login.ejs");
 });
