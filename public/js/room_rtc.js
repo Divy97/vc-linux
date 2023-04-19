@@ -1,6 +1,12 @@
 let token = null;
 let client;
 
+let regToken = localStorage.getItem("token")
+if (!regToken) {
+  window.location = "login.ejs";
+  alert("please login to enter a meeting")
+}
+
 let uid = sessionStorage.getItem("uid");
 if (!uid) {
   uid = String(Math.floor(Math.random() * 10000));

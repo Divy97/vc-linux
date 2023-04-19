@@ -71,6 +71,13 @@
             </form>
         </div>
     </main>
+    <script>
+        let regToken = localStorage.getItem("token")
+        if (!regToken) {
+            window.location = "login.ejs";
+            alert("please login to enter a meeting")
+        }
+    </script>
     <!-- <script>
         let form = document.getElementById("lobby__form");
 

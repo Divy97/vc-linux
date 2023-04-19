@@ -1,3 +1,4 @@
+
 let messagesContainer = document.getElementById("messages");
 messagesContainer.scrollTop = messagesContainer.scrollHeight;
 
@@ -77,4 +78,6 @@ let app = document.getElementById("app")
 ask_btn.addEventListener('click', () => {
   window.open('/gpt.ejs', '_blank');
 })
+
+
 

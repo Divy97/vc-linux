@@ -44,6 +44,10 @@ app.get("/register.ejs", (req, res) => {
   res.render("register.ejs");
 });
 
+app.get("/guest.ejs", (req, res) => {
+  res.render("guest.ejs");
+});
+
 
 app.get("/lobby.ejs", (req, res) => {
   res.render("lobby.ejs");

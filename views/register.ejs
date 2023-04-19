@@ -45,16 +45,16 @@
         <div class="container">
 
             <header>Signup</header>
-            <form action="https://www.codinglabweb.com/">
+            <form action="#">
                 <div class="">
-                    <div class="input-field">
-                        <input type="text" placeholder="Enter your name" />
 
+                    <div class="input-field">
+                        <input type="text" id='name' placeholder="Enter your name" />
                     </div>
                     <br>
                     <div class="field email-field">
                         <div class="input-field">
-                            <input type="email" placeholder="Enter your email" class="email" />
+                            <input type="email" id='email' placeholder="Enter your email" class="email" />
                         </div>
                         <span class="error email-error">
                             <i class="bx bx-error-circle error-icon"></i>
@@ -63,7 +63,7 @@
                     </div>
                     <div class="field create-password">
                         <div class="input-field">
-                            <input type="password" placeholder="Create password" class="password" />
+                            <input type="password" id='password' placeholder="Create password" class="password" />
                             <i class="bx bx-hide show-hide"></i>
                         </div>
                         <span class="error password-error">
@@ -76,7 +76,7 @@
                     </div>
                     <div class="field confirm-password">
                         <div class="input-field">
-                            <input type="password" placeholder="Confirm password" class="cPassword" />
+                            <input type="password" id='cPassword' placeholder="Confirm password" class="cPassword" />
                             <i class="bx bx-hide show-hide"></i>
                         </div>
                         <span class="error cPassword-error">
@@ -88,6 +88,8 @@
                         <input type="submit" value="Submit Now" />
                     </div>
                     <span class="reg_link">Have an Account? <a href="/login.ejs">Sign in</a></span>
+                    <br />
+                    <span class="reg_link">Login <a href="/guest.ejs">As Guest</a></span>
             </form>
         </div>
     </div>
@@ -149,6 +151,7 @@
         // Calling Funtion on Form Sumbit
         form.addEventListener("submit", (e) => {
             e.preventDefault(); //preventing form submitting
+
             checkEmail();
             createPass();
             confirmPass();
@@ -165,6 +168,49 @@
             ) {
                 location.href = form.getAttribute("action");
             }
+
+
+            // Get the values of the email and password fields
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('email').value;
+            const cPassword = document.getElementById('email').value;
+
+            console.log(email, password);
+            // Send the data to the API using the fetch() method
+            console.log("intry");
+            const config = {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            };
+
+            fetch("http://localhost:3001/api/user/", {
+                method: "POST",
+                headers: config.headers,
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    password: password,
+                }),
+            })
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error("Network response was not ok");
+                    }
+                    return response.json();
+                })
+                .then((data) => {
+                    console.log(data);
+                    alert("Registered Successfully");
+                    localStorage.setItem("userInfo", JSON.stringify(data));
+                    window.location.href = "/login.ejs";
+                })
+                .catch((error) => {
+                    console.log("inCatch");
+                    alert(error.message);
+                });
+
         });
 
     </script>
