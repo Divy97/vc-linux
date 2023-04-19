@@ -7,6 +7,7 @@ if (!regToken) {
   alert("please login to enter a meeting")
 }
 
+
 let uid = sessionStorage.getItem("uid");
 if (!uid) {
   uid = String(Math.floor(Math.random() * 10000));
@@ -27,6 +28,39 @@ let roomId = CHANNEL;
 if (!roomId) {
   roomId = "main";
 }
+
+const now = new Date();
+const timeString = now.toLocaleTimeString(); // returns the time string in the local time zone
+const date = new Date();
+
+
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+var raw = JSON.stringify({
+  "roomName": roomId,
+  "hostName": USERNAME,
+  "startTime": timeString,
+  "endTime": "",
+  "date": date
+});
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:3001/api/user/setMeetingData", requestOptions)
+  .then(response => response.json())
+  .then(result => {
+    if (result.message == "Meeting RoomName Already Exists") {
+      alert("RoomName already in use");
+      window.location.href = '/lobby.ejs';
+    }
+  })
+  .catch(error => console.log('error', error));
 
 let localTracks = [];
 let remoteUsers = {};
