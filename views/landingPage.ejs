@@ -30,265 +30,291 @@
             </nav>
         </header>
 
-        <main id="main">
-            <section id="about">
-                <div class="text">
-                    <h1 class="brand-heading">Blah</h1>
-                    <h2>Communication made easier!</h2>
-                    <p class="description">An online meeting web app! Connect with people easily.<br /> Get
-                        multiple screen sharing options, solve any doubt related to any topic with out AI bot and alot
-                        more!</p>
-
-                </div>
-                <img src="https://static.vecteezy.com/system/resources/previews/002/158/130/original/illustrations-flat-design-concept-video-conference-online-meeting-work-form-home-call-and-live-video-illustrate-free-vector.jpg"
-                    style="height:300px;width:500px;" alt="image" />
 
 
-                <button class='joinMeet'><a href="/lobby.ejs">Join Meeting</a></button>
+        <div style="
+        position: fixed;
+        color: white;
+        right:0% ;
+        bottom: 5%;
+        font-size: 2rem;
+        ">
+            <img alt="image"
+                src="data:image/png;base64,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"
+                style="height:40px;width:50px;position:sticky;border-radius: 50%;" />
+            <a href="/gpt.ejs" action="_blank" style="font-size:20px;position:sticky;color:aliceblue"">Ask
+            me anything!</a>
+        </div>
+        <main id=" main">
+                <section id="about">
+                    <div class="text">
+                        <h1 class="brand-heading">Blah</h1>
+                        <h2>Communication made easier!</h2>
+                        <p class="description">An online meeting web app! Connect with people easily.<br /> Get
+                            multiple screen sharing options, solve any doubt related to any topic with out AI bot and
+                            alot
+                            more!</p>
 
-                <button class='hostMeet'><a href="/lobby.ejs">Host Meeting</a></button>
-
-
-            </section>
-
-            <section id="features">
-                <div class="text">
-                    <h2 class="section-heading">Features</h2>
-                </div>
-                <div class="cards-list-features">
-
-                    <div class="card 1 card_features">
-                        <div class="card_image_feature"> <img alt="image"
-                                src="https://cdn.dribbble.com/users/37380/screenshots/10883216/zoom-party4_12fps.gif" />
-                        </div>
-                        <div class="card_title_feature title-white">
-                            <p>Multiple screen sharing</p>
-                        </div>
                     </div>
+                    <img src="https://static.vecteezy.com/system/resources/previews/002/158/130/original/illustrations-flat-design-concept-video-conference-online-meeting-work-form-home-call-and-live-video-illustrate-free-vector.jpg"
+                        style="height:300px;width:500px;" alt="image" />
 
 
-                    <div class="card 2 card_features">
-                        <div class="card_image_feature">
-                            <img src="https://media.tenor.com/8j63H6SfRVoAAAAM/work-from-home-wfh.gif" alt="image" />
-                        </div>
-                        <div class="card_title_feature">
-                            <p>Audio,Video,Chat</p>
-                        </div>
+                    <button class='joinMeet'><a href="/lobby.ejs">Join Meeting</a></button>
+
+                    <button class='hostMeet'><a href="/lobby.ejs">Host Meeting</a></button>
+
+
+                </section>
+
+                <section id="features">
+                    <div class="text">
+                        <h2 class="section-heading">Features</h2>
                     </div>
+                    <div class="cards-list-features">
 
-                    <div class="card 3 card_features">
-                        <div class="card_image_feature">
-                            <img src="https://media.tenor.com/ow94qLGI8WsAAAAM/ai.gif" style="background-color:black"
-                                alt="image" />
-                        </div>
-                        <div class="card_title_feature3 title-white">
-                            <p>With AI powered chatbot</p>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <section id="preview">
-                <div class="text">
-                    <h2 class="section-heading">Preview</h2>
-                </div>
-                <div class="cards">
-                    <div class="row">
-                        <div class="column">
-                            <div class="card">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aut consectetur
-                                    dolores ducimus excepturi illum magni omnis quae vel! Necessitatibus.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias cupiditate dolores
-                                    doloribus eum id iure iusto sequi ut.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium officia
-                                    praesentium
-                                    quas rerum ullam unde velit. Aliquid odit, quo!</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet aspernatur
-                                    blanditiis exercitationem nihil, quo suscipit vel?</p>
+                        <div class="card 1 card_features">
+                            <div class="card_image_feature"> <img alt="image"
+                                    src="https://cdn.dribbble.com/users/37380/screenshots/10883216/zoom-party4_12fps.gif" />
+                            </div>
+                            <div class="card_title_feature title-white">
+                                <p>Multiple screen sharing</p>
                             </div>
                         </div>
-                        <div class="column">
-                            <div class="card">
-                                <iframe id="video" width="560" height="315"
-                                    src="https://www.youtube.com/embed/D0UnqGm_miA" title="YouTube video player"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowFullScreen></iframe>
+
+
+                        <div class="card 2 card_features">
+                            <div class="card_image_feature">
+                                <img src="https://media.tenor.com/8j63H6SfRVoAAAAM/work-from-home-wfh.gif"
+                                    alt="image" />
+                            </div>
+                            <div class="card_title_feature">
+                                <p>Audio,Video,Chat</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
 
-            <section id="testimonials">
-                <link rel="stylesheet"
-                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-                </link>
-                <div class="text">
-                    <h2 class="section-heading">What other people say...</h2>
-                </div>
-                <div class="cards_testimonial">
-                    <div class="row_testimonial">
-                        <div class="column_testimonial">
-                            <div class="card_testimonial">
-                                <div class="rounded-image_testimonial">
-                                    <img src="https://i.pinimg.com/736x/b5/41/03/b54103dfbd8e64991981cfe514cfeb39.jpg"
-                                        alt="Jane Doe" class="rounded_testimonial" />
-                                    <p class="customer-name_testimonial">Jane Doe</p>
+                        <div class="card 3 card_features">
+                            <div class="card_image_feature">
+                                <img src="https://media.tenor.com/ow94qLGI8WsAAAAM/ai.gif"
+                                    style="background-color:black" alt="image" />
+                            </div>
+                            <div class="card_title_feature3 title-white">
+                                <p>With AI powered chatbot</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section id="preview">
+                    <div class="text">
+                        <h2 class="section-heading">Preview</h2>
+                    </div>
+                    <div class="cards">
+                        <div class="row">
+                            <div class="column">
+                                <div class="card">
+                                    <p style="font-size: 1.4rem;text-align: justify;">
+                                        The online meeting website that we created is a game-changer for individuals and
+                                        businesses seeking efficient, hassle-free communication. The platform boasts an
+                                        array of
+                                        impressive features, including multiple screen sharing options, enabling
+                                        seamless
+                                        collaboration. In addition, the AI chatbot provides quick and accurate answers
+                                        to
+                                        any
+                                        questions that may arise during meetings. The user-friendly interface guarantees
+                                        a
+                                        smooth and productive experience, saving time and energy for busy professionals.
+                                        With
+                                        the ability to customize meetings to specific needs and preferences, this
+                                        website is
+                                        a
+                                        valuable asset for anyone seeking to optimize their remote communication.
+                                    </p>
                                 </div>
-                                <div class="customer-review_testimonial">
-                                    <div class='star_rating_testimonial'>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
+                            </div>
+                            <div class="column">
+                                <div class="card">
+                                    <iframe id="video" width="560" height="315"
+                                        src="https://www.youtube.com/embed/D0UnqGm_miA" title="YouTube video player"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowFullScreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="testimonials">
+                    <link rel="stylesheet"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                    </link>
+                    <div class="text">
+                        <h2 class="section-heading">What other people say...</h2>
+                    </div>
+                    <div class="cards_testimonial">
+                        <div class="row_testimonial">
+                            <div class="column_testimonial">
+                                <div class="card_testimonial">
+                                    <div class="rounded-image_testimonial">
+                                        <img src="https://i.pinimg.com/736x/b5/41/03/b54103dfbd8e64991981cfe514cfeb39.jpg"
+                                            alt="Jane Doe" class="rounded_testimonial" />
+                                        <p class="customer-name_testimonial">Jane Doe</p>
                                     </div>
+                                    <div class="customer-review_testimonial">
+                                        <div class='star_rating_testimonial'>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
 
-                                    <p class="customer-text_testimonial">Great application!</p>
+                                        <p class="customer-text_testimonial">Great application!</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="column_testimonial">
-                            <div class="card_testimonial">
-                                <div class="rounded-image_testimonial">
-                                    <img src="https://thumbs.dreamstime.com/b/cute-south-american-young-man-smiling-141207413.jpg"
-                                        alt="John Smith" class="rounded_testimonial" />
-                                    <p class="customer-name_testimonial">John Smith</p>
-                                </div>
-                                <div class="customer-review_testimonial">
-                                    <div class='star_rating_testimonial'>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star"></span>
+                            <div class="column_testimonial">
+                                <div class="card_testimonial">
+                                    <div class="rounded-image_testimonial">
+                                        <img src="https://thumbs.dreamstime.com/b/cute-south-american-young-man-smiling-141207413.jpg"
+                                            alt="John Smith" class="rounded_testimonial" />
+                                        <p class="customer-name_testimonial">John Smith</p>
                                     </div>
+                                    <div class="customer-review_testimonial">
+                                        <div class='star_rating_testimonial'>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
 
 
-                                    <p class="customer-text_testimonial">Easy to use!</p>
+                                        <p class="customer-text_testimonial">Easy to use!</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="column_testimonial">
-                            <div class="card_testimonial">
-                                <div class="rounded-image_testimonial">
-                                    <img src="https://static01.nyt.com/images/2016/03/27/books/review/27NORTH/27NORTH-superJumbo.jpg"
-                                        alt="Rose Baker" class="rounded_testimonial" />
-                                    <p class="customer-name_testimonial">Rose Baker</p>
-                                </div>
-                                <div class="customer-review_testimonial">
-                                    <div class='star_rating_testimonial'>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
+                            <div class="column_testimonial">
+                                <div class="card_testimonial">
+                                    <div class="rounded-image_testimonial">
+                                        <img src="https://static01.nyt.com/images/2016/03/27/books/review/27NORTH/27NORTH-superJumbo.jpg"
+                                            alt="Rose Baker" class="rounded_testimonial" />
+                                        <p class="customer-name_testimonial">Rose Baker</p>
                                     </div>
+                                    <div class="customer-review_testimonial">
+                                        <div class='star_rating_testimonial'>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
 
 
-                                    <p class="customer-text_testimonial">Amazing AI tool</p>
+                                        <p class="customer-text_testimonial">Amazing AI tool</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="column_testimonial">
-                            <div class="card_testimonial">
-                                <div class="rounded-image_testimonial">
-                                    <img src="https://media.istockphoto.com/id/1215928393/photo/portrait-of-smiling-young-man-outdoors.jpg?s=612x612&w=0&k=20&c=Nf0Oybf-blbhKmDaTrnnwKKAVjSxKKbA6xCN0BukONk="
-                                        alt="Will Simon" class="rounded_testimonial" />
-                                    <p class="customer-name_testimonial">Will Simon</p>
-                                </div>
-                                <div class="customer-review_testimonial">
-                                    <div class='star_rating_testimonial'>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
+                            <div class="column_testimonial">
+                                <div class="card_testimonial">
+                                    <div class="rounded-image_testimonial">
+                                        <img src="https://media.istockphoto.com/id/1215928393/photo/portrait-of-smiling-young-man-outdoors.jpg?s=612x612&w=0&k=20&c=Nf0Oybf-blbhKmDaTrnnwKKAVjSxKKbA6xCN0BukONk="
+                                            alt="Will Simon" class="rounded_testimonial" />
+                                        <p class="customer-name_testimonial">Will Simon</p>
                                     </div>
+                                    <div class="customer-review_testimonial">
+                                        <div class='star_rating_testimonial'>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                        </div>
 
 
-                                    <p class="customer-text_testimonial">Great features available!</p>
+                                        <p class="customer-text_testimonial">Great features available!</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section id="pricing">
-                <div class="text">
-                    <h2 class="section-heading">Pricing</h2>
-                </div>
-                <div class="cards">
-                    <div class="row">
-                        <div class="column">
-                            <div class="card" id="starter">
-                                <h3 class="cardheading">
-                                    Starter</h3>
-                                <p><i class="bi bi-search-heart"></i></p>
-                                <p class="price">$10.99<span>/Per Month</span></p>
-                                <div class="pricing-features">Features</div>
-                                <ul class="features">
-                                    <li class="features-items" style="font-size:18px">40 minutes per meeting</li>
-                                    <li class="features-items" style="font-size:18px">50 attendees</li>
-                                    <li class="features-items" style="font-size:18px">Team Chat</li>
-                                    <li class="features-items" style="font-size:18px">Multiple Screen Sharing
-                                    </li>
+                <section id="pricing">
+                    <div class="text">
+                        <h2 class="section-heading">Pricing</h2>
+                    </div>
+                    <div class="cards">
+                        <div class="row">
+                            <div class="column">
+                                <div class="card" id="starter">
+                                    <h3 class="cardheading">
+                                        Starter</h3>
+                                    <p><i class="bi bi-search-heart"></i></p>
+                                    <p class="price">$10.99<span>/Per Month</span></p>
+                                    <div class="pricing-features">Features</div>
+                                    <ul class="features">
+                                        <li class="features-items" style="font-size:18px">40 minutes per meeting</li>
+                                        <li class="features-items" style="font-size:18px">50 attendees</li>
+                                        <li class="features-items" style="font-size:18px">Team Chat</li>
+                                        <li class="features-items" style="font-size:18px">Multiple Screen Sharing
+                                        </li>
 
 
-                                </ul>
-                                <p class="btn-pricing"><a href="#" class="add-to-card">Add to Cart</a></p>
-                            </div>
-                        </div>
-
-                        <div class="column">
-                            <div class="card" id="premium">
-                                <h3 class="cardheading">
-                                    Premium</h3>
-                                <p><i class="bi bi-graph-up-arrow"></i></p>
-                                <p class="price">$24.99<span>/Per Month</span></p>
-                                <div class="pricing-features">Features</div>
-                                <ul class="features">
-                                    <li class="features-items" style="font-size:18px">upto 30 hours per meeting
-                                    </li>
-                                    <li class="features-items" style="font-size:18px">100 attendees</li>
-                                    <li class="features-items" style="font-size:18px">Team Chat</li>
-                                    <li class="features-items" style="font-size:18px">White Board</li>
-                                    <li class="features-items" style="font-size:18px">Multiple Screen Sharing
-                                    </li>
-                                </ul>
-                                <p class="btn-pricing"><a href="#" class="add-to-card">Add to Cart</a></p>
+                                    </ul>
+                                    <p class="btn-pricing"><a href="#" class="add-to-card">Add to Cart</a></p>
+                                </div>
                             </div>
 
-                        </div>
-                        <div class="column">
-                            <div class="card" id="unlimited">
-                                <h3 class="cardheading">
-                                    Unlimited</h3>
-                                <p><i class="bi bi-display"></i></p>
-                                <p class="price">$49.99<span>/Per Month</span></p>
-                                <div class="pricing-features">Features</div>
-                                <ul class="features">
-                                    <li class="features-items" style="font-size:18px">upto 30 hours per meeting
-                                    </li>
-                                    <li class="features-items" style="font-size:18px">300 attendees</li>
-                                    <li class="features-items" style="font-size:18px">Team Chat</li>
-                                    <li class="features-items" style="font-size:18px">Multiple Screen Sharing
-                                    </li>
-                                    <li class="features-items" style="font-size:18px">Whiteboard unlimited</li>
-                                    <li class="features-items" style="font-size:18px">Cloud Storage</li>
-                                    <li class="features-items" style="font-size:18px">Essential Apps</li>
+                            <div class="column">
+                                <div class="card" id="premium">
+                                    <h3 class="cardheading">
+                                        Premium</h3>
+                                    <p><i class="bi bi-graph-up-arrow"></i></p>
+                                    <p class="price">$24.99<span>/Per Month</span></p>
+                                    <div class="pricing-features">Features</div>
+                                    <ul class="features">
+                                        <li class="features-items" style="font-size:18px">upto 30 hours per meeting
+                                        </li>
+                                        <li class="features-items" style="font-size:18px">100 attendees</li>
+                                        <li class="features-items" style="font-size:18px">Team Chat</li>
+                                        <li class="features-items" style="font-size:18px">White Board</li>
+                                        <li class="features-items" style="font-size:18px">Multiple Screen Sharing
+                                        </li>
+                                    </ul>
+                                    <p class="btn-pricing"><a href="#" class="add-to-card">Add to Cart</a></p>
+                                </div>
 
-                                </ul>
-                                <p class="btn-pricing"><a href="#" class="add-to-card">Add to Cart</a></p>
+                            </div>
+                            <div class="column">
+                                <div class="card" id="unlimited">
+                                    <h3 class="cardheading">
+                                        Unlimited</h3>
+                                    <p><i class="bi bi-display"></i></p>
+                                    <p class="price">$49.99<span>/Per Month</span></p>
+                                    <div class="pricing-features">Features</div>
+                                    <ul class="features">
+                                        <li class="features-items" style="font-size:18px">upto 30 hours per meeting
+                                        </li>
+                                        <li class="features-items" style="font-size:18px">300 attendees</li>
+                                        <li class="features-items" style="font-size:18px">Team Chat</li>
+                                        <li class="features-items" style="font-size:18px">Multiple Screen Sharing
+                                        </li>
+                                        <li class="features-items" style="font-size:18px">Whiteboard unlimited</li>
+                                        <li class="features-items" style="font-size:18px">Cloud Storage</li>
+                                        <li class="features-items" style="font-size:18px">Essential Apps</li>
+
+                                    </ul>
+
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- <section id="signup">
+                <!-- <section id="signup">
                 <div class="text">
                     <h2 class="section-heading">Sign Up</h2>
                 </div>
@@ -333,62 +359,66 @@
                 </div>
 
             </section> -->
-        </main>
+                </main>
 
-        <footer id="footer">
+                <footer id="footer">
 
-            <div class="cards_footer">
-                <div class="row_footer">
-                    <div class="column_footer social-icons">
+                    <div class="cards_footer">
+                        <div class="row_footer">
+                            <div class="column_footer social-icons">
 
-                        <h3 class="footer-heading" style="font-size:30px;margin-left:-400px;margin-top:30px">
-                            Follow Us On</h3>
-                        <ul>
-                            <li class="social-icon"><img src="https://cdn-icons-png.flaticon.com/512/733/733635.png"
-                                    style="height:35px;width:35px;margin-left:-500px" alt="image" /><i
-                                    class="bi bi-twitter"></i></li>
-                            <li class="social-icon"><img alt="image"
-                                    src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png"
-                                    style="height:35px;width:35px;margin-left:-430px" /><i class="bi bi-facebook"></i>
-                            </li>
-                            <li class="social-icon"><img alt="image"
-                                    src="https://cdn-icons-png.flaticon.com/512/1384/1384015.png"
-                                    style="height:35px;width:35px;margin-left:-360px;" /><i
-                                    class=" bi bi-instagram"></i></li>
-                            <li class="social-icon"><img alt="image"
-                                    src="https://cdn-icons-png.flaticon.com/512/4926/4926624.png"
-                                    style="height:35px;width:35px;margin-left:-290px;" /><i class="bi bi-github"></i>
-                            </li>
-                        </ul>
+                                <h3 class="footer-heading" style="font-size:30px;margin-left:-400px;margin-top:30px">
+                                    Follow Us On</h3>
+                                <ul>
+                                    <li class="social-icon"><img
+                                            src="https://cdn-icons-png.flaticon.com/512/733/733635.png"
+                                            style="height:35px;width:35px;margin-left:-500px" alt="image" /><i
+                                            class="bi bi-twitter"></i></li>
+                                    <li class="social-icon"><img alt="image"
+                                            src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png"
+                                            style="height:35px;width:35px;margin-left:-430px" /><i
+                                            class="bi bi-facebook"></i>
+                                    </li>
+                                    <li class="social-icon"><img alt="image"
+                                            src="https://cdn-icons-png.flaticon.com/512/1384/1384015.png"
+                                            style="height:35px;width:35px;margin-left:-360px;" /><i
+                                            class=" bi bi-instagram"></i></li>
+                                    <li class="social-icon"><img alt="image"
+                                            src="https://cdn-icons-png.flaticon.com/512/4926/4926624.png"
+                                            style="height:35px;width:35px;margin-left:-290px;" /><i
+                                            class="bi bi-github"></i>
+                                    </li>
+                                </ul>
 
+                            </div>
+                            <div class='contactUs_footer'>
+                                <h3 class="contactUs-heading" style="font-size:30px;margin-left:200px;margin-top:30px">
+                                    Contact Us</h3>
+                                <p
+                                    style="margin-left:500px;margin-top:-18px;font-size:18px;color:black;font-weight:bolder">
+                                    New York, NY 10012, US<img alt="image"
+                                        src="https://cdn-icons-png.flaticon.com/512/69/69524.png" class="contactIcons"
+                                        style="margin-left:-240px;margin-top:35px" /></p>
+                                <p
+                                    style="margin-left:500px;margin-top:-18px;font-size:18px;color:black;font-weight:bolder">
+                                    blahsupport@gmail.com<img alt="image"
+                                        src="https://cdn-icons-png.flaticon.com/512/2669/2669570.png"
+                                        class="contactIcons" style="margin-left:-240px;margin-top:35px" /></p>
+                                <p
+                                    style="margin-left:640px;margin-top:-18px;font-size:18px;color:black;font-weight:bolder;">
+                                    +91 981123891<img alt="image"
+                                        src="https://cdn-icons-png.flaticon.com/512/3249/3249904.png"
+                                        class="contactIcons" style="margin-left:-160px;margin-top:37px;" /></p>
+
+                            </div>
+
+
+                        </div>
                     </div>
-                    <div class='contactUs_footer'>
-                        <h3 class="contactUs-heading" style="font-size:30px;margin-left:200px;margin-top:30px">
-                            Contact Us</h3>
-                        <p style="margin-left:500px;margin-top:-18px;font-size:18px;color:black;font-weight:bolder">
-                            New York, NY 10012, US<img alt="image"
-                                src="https://cdn-icons-png.flaticon.com/512/69/69524.png" class="contactIcons"
-                                style="margin-left:-240px;margin-top:35px" /></p>
-                        <p style="margin-left:500px;margin-top:-18px;font-size:18px;color:black;font-weight:bolder">
-                            blahsupport@gmail.com<img alt="image"
-                                src="https://cdn-icons-png.flaticon.com/512/2669/2669570.png" class="contactIcons"
-                                style="margin-left:-240px;margin-top:35px" /></p>
-                        <p style="margin-left:640px;margin-top:-18px;font-size:18px;color:black;font-weight:bolder;">
-                            +91 981123891<img alt="image" src="https://cdn-icons-png.flaticon.com/512/3249/3249904.png"
-                                class="contactIcons" style="margin-left:-160px;margin-top:37px;" /></p>
-                        <img alt="image" src="https://cdn-icons-png.flaticon.com/512/65/65827.png"
-                            style="height:40px;width:50px;padding-top:-1550px;margin-left:1000px;position:sticky" />
-                        <a href="" style="margin-top:-500px;margin-left:20px;font-size:20px;position:sticky">Ask
-                            me anything!</a>
-                    </div>
 
 
-                </div>
-            </div>
-
-
-        </footer>
-    </div>
+                </footer>
+        </div>
 </body>
 
 </html>
