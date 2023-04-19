@@ -1,10 +1,8 @@
-// const bot = require('./assets/bot.svg')
-// const user = require('./assets/user.svg')
-
+// const bot = require('../assets/bot.svg')
+// const user = require('../assets/user.svg')
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
-let user
-let bot
+
 let loadInterval
 
 function loader(element) {
@@ -51,10 +49,7 @@ function chatStripe(isAi, value, uniqueId) {
         <div class="wrapper ${isAi && 'ai'}">
             <div class="chat">
                 <div class="profile">
-                    <img 
-                      src=${isAi ? bot : user} 
-                      alt="${isAi ? 'bot' : 'user'}" 
-                    />
+                    
                 </div>
                 <div class="message" id=${uniqueId}>${value}</div>
             </div>
@@ -97,7 +92,7 @@ const handleSubmit = async (e) => {
     //     })
     // })
 
-    const response = await fetch('http://localhost:8080/api/openai', {
+    const response = await fetch('http://localhost:8000/api/openai', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

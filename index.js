@@ -4,7 +4,7 @@ const path = require("path");
 const { RtcTokenBuilder, RtcRole } = require("agora-access-token");
 const cors = require('cors');
 const { Configuration, OpenAIApi } = require('openai')
-const PORT = 8080;
+const PORT = 8000;
 const app = express();
 
 
@@ -26,14 +26,14 @@ app.use((req, res, next) => {
 });
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "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",
 });
 
 const openai = new OpenAIApi(configuration);
 
 
 app.get("/", (req, res) => {
-  res.render("lobby.ejs");
+  res.render("landingPage.ejs");
 });
 
 app.get("/lobby.ejs", (req, res) => {
