@@ -61,6 +61,11 @@
         </div>
     </div>
     <script>
+        let regToken = localStorage.getItem("token")
+        if (regToken) {
+            window.location = "/lobby.ejs";
+            alert("Already Logged in")
+        }
         const pass_field = document.querySelector('.pass-key');
         const showBtn = document.querySelector('.show');
         showBtn.addEventListener('click', function () {

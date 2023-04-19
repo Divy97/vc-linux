@@ -97,6 +97,12 @@
 
     <script>
 
+        let regToken = localStorage.getItem("token")
+        if (regToken) {
+            window.location = "/lobby.ejs";
+            alert("Already Registered")
+        }
+
         const form = document.querySelector("form"),
             emailField = form.querySelector(".email-field"),
             emailInput = emailField.querySelector(".email"),
@@ -150,6 +156,7 @@
 
         // Calling Funtion on Form Sumbit
         form.addEventListener("submit", (e) => {
+
             e.preventDefault(); //preventing form submitting
 
             checkEmail();

@@ -25,6 +25,7 @@
                     <li><a href="#pricing" class="nav-link">Pricing</a></li>
                     <!-- <li><a href="#testimonials" class="nav-link">Testimonials</a></li> -->
                     <li id="signUp"><a href="/register.ejs" class="nav-link">Sign Up</a></li>
+                    <li><a href="/register.ejs" class="nav-link" id="logout">Logout</a></li>
                 </ul>
 
             </nav>
@@ -421,12 +422,21 @@
         </div>
         <script>
 
-            let signUp = document.getElementById("signUp").style.color = 'red'
-            // let token = localStorage.getItem("token");
-            // console.log(signUp);
-            // if (token) {
-            //     signUp.style.color = "red"
-            // }
+            let signUp = document.getElementById("signUp")
+            let logout = document.getElementById("logout")
+            let regToken = localStorage.getItem("token")
+            if (regToken) {
+                signUp.style.display = "none"
+                // logout.style.display = "block"
+            } else {
+                // signUp.style.display = "block"
+                logout.style.display = "none"
+            }
+
+            logout.addEventListener('click', () => {
+                localStorage.removeItem("token")
+                window.location.href = '/landingPage.ejs'
+            })
         </script>
 </body>
 

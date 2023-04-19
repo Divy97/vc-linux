@@ -38,6 +38,11 @@
             <form action="#" id="login_form">
                 <div class="field">
                     <span class="fa fa-user"></span>
+                    <input type="text" id='name' required placeholder="Name">
+                </div>
+                <br />
+                <div class="field">
+                    <span class="fa fa-user"></span>
                     <input type="text" id='email' required placeholder="Email">
                 </div>
                 <br />
@@ -53,19 +58,47 @@
         </div>
     </div>
     <script>
+        let regToken = localStorage.getItem("token")
+        if (regToken) {
+            window.location = "/lobby.ejs";
+            alert("Already Logged in")
+        }
         const form = document.getElementById('login_form');
 
         form.addEventListener('submit', (event) => {
             event.preventDefault();
 
             // Get the values of the email and password fields
+            const name = document.getElementById("name").value;
             const email = document.getElementById('email').value;
 
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+
+            var raw = JSON.stringify({
+                "name": name,
+                "email": email
+            });
+
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+
+            fetch("http://localhost:3001/api/user/setGuestData", requestOptions)
+                .then(response => response.json())
+                .then(result => {
+                    console.log(result);
+                    localStorage.setItem("token", result._id);
+                    alert("Successful");
+                    window.location.href = "/lobby.ejs";
+                })
+                .catch(error => alert(error));
             console.log(email);
             // Send the data to the API using the fetch() method
-            localStorage.setItem("token", "GuestToken67362571972");
-            alert("Login successful!");
-            window.location.href = "/lobby.ejs";
+
         });
     </script>
 </body>
