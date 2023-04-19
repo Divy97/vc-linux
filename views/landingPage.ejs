@@ -24,7 +24,7 @@
                     <li><a href="#preview" class="nav-link">Preview</a></li>
                     <li><a href="#pricing" class="nav-link">Pricing</a></li>
                     <!-- <li><a href="#testimonials" class="nav-link">Testimonials</a></li> -->
-                    <li><a href="/register.ejs" class="nav-link">Sign Up</a></li>
+                    <li id="signUp"><a href="/register.ejs" class="nav-link">Sign Up</a></li>
                 </ul>
 
             </nav>
@@ -419,6 +419,15 @@
 
                 </footer>
         </div>
+        <script>
+
+            let signUp = document.getElementById("signUp").style.color = 'red'
+            // let token = localStorage.getItem("token");
+            // console.log(signUp);
+            // if (token) {
+            //     signUp.style.color = "red"
+            // }
+        </script>
 </body>
 
 </html>
