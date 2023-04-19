@@ -36,6 +36,15 @@ app.get("/", (req, res) => {
   res.render("landingPage.ejs");
 });
 
+app.get("/login.ejs", (req, res) => {
+  res.render("login.ejs");
+});
+
+app.get("/register.ejs", (req, res) => {
+  res.render("register.ejs");
+});
+
+
 app.get("/lobby.ejs", (req, res) => {
   res.render("lobby.ejs");
 });
